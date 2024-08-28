@@ -117,11 +117,12 @@ while True:
         pygame.draw.ellipse(screen, WHITE, ball)
         pygame.draw.aaline(screen, WHITE, (SCREEN_WIDTH // 2, 0), (SCREEN_WIDTH // 2, SCREEN_HEIGHT))
 
+        # Adjusted positions for scores
         player_text = font.render(f"{player_score}", False, WHITE)
-        screen.blit(player_text, (SCREEN_WIDTH // 2 - 50, 10))
+        screen.blit(player_text, (SCREEN_WIDTH // 2 - 100, 10))
 
         ai_text = font.render(f"{ai_score}", False, WHITE)
-        screen.blit(ai_text, (SCREEN_WIDTH // 2 + 25, 10))
+        screen.blit(ai_text, (SCREEN_WIDTH // 2 + 75, 10))
 
         pygame.display.flip()
         clock.tick(FPS)
